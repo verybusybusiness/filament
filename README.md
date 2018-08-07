@@ -100,7 +100,8 @@ Many other features have been either prototyped or planned:
     - `filaflat`:              Serialization/deserialization library used for materials
     - `filagui`:               Helper library for [Dear ImGui](https://github.com/ocornut/imgui)
     - `filamat`:               Material generation library
-    - `image`:                 Image library, only intended for internal use
+    - `image`:                 Image container, filtering, and simple operations
+    - `imageio`:               Image file reading / writing, only intended for internal use
     - `math`:                  Math library
     - `utils`:                 Utility library (threads, memory, data structures, etc.)
   - `samples`:               Sample desktop applications
@@ -111,6 +112,7 @@ Many other features have been either prototyped or planned:
     - `filamesh`:            Mesh converter
     - `matc`:                Material compiler
     - `matinfo`              Displays information about materials compiled with `matc`
+    - `mipgen`               Generates mipmaps, can also be used to resize or blur images.
     - `normal-blending`:     Tool to blend normal maps
     - `roughness-prefilter`: Pre-filters a roughness map from a normal map to reduce aliasing 
     - `skygen`:              Physically-based sky environment texture generator

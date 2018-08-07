@@ -18,6 +18,8 @@
 #define IMAGE_UTILITIES_H_
 
 #include <math/scalar.h>
+#include <math/vec3.h>
+#include <math/vec4.h>
 
 namespace image {
 

@@ -388,7 +388,7 @@ void PNGEncoder::encode(const Image& image) {
 
         png_write_info(mPNG, mInfo);
 
-        uint32_t channels = (srcChannels == 1 ? 1 : getChannelsCount());
+        uint32_t dstChannels = (srcChannels == 1 ? 1 : getChannelsCount());
 
         std::unique_ptr<png_bytep[]> row_pointers(new png_bytep[height]);
         std::unique_ptr<uint8_t[]> data;
@@ -403,8 +403,7 @@ void PNGEncoder::encode(const Image& image) {
         }
 
         for (size_t y = 0; y < height; y++) {
-            row_pointers[y] = reinterpret_cast<png_bytep>(&data[y * width * channels *
-                    sizeof(uint8_t)]);
+            row_pointers[y] = reinterpret_cast<png_bytep>(&data[y * width * dstChannels]);
         }
 
         png_write_image(mPNG, row_pointers.get());
